@@ -98,6 +98,7 @@ const getPostById = (req, res) => {
         }
     }
     if(search == true){
+        posts.splice(index, 1)
         res.status(200).send({message:'Delete post success', posts:posts})
     }else{
         res.status(404).send({message:'Post data is not found'})
